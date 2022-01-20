@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <title>Users</title>
+</head>
+<body>
+    <div class="main">
+    <h1>Add a User</h1>
+    <form style="text-align: right; margin-right: 10px !important; margin-top: 10px" action='/'>
+        <button class="home">Home </button>
+    </form>
+        <form action="/create_user" method="POST">
+        <br>
+        <label for="fname">First Name:</label>
+        <br>
+        <input id="email" type="text" name="fname">
+        <br>
+        <label for="lname">Last Name:</label>
+        <br>
+        <input id="email" type="text" name="lname">
+        <br>
+        <label for="email">Email:</label>
+        <br>
+        <input style="margin-left:17px" id="email" type="text" name="email">
+        <br>
+        <form id="submit" action='/create_user' method="POST">
+            <button class="back">Create User</button>
+        </form>
+    </form> 
+    </div>
+    
+
+    
+</body>
+</html>

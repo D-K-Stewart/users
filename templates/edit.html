@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <title>Users</title>
+</head>
+<body>
+    <div class="main">
+    <h1>Edit</h1>
+    <form style="text-align: right; margin-right: 10px !important; margin-top: 10px; margin-bottom: -20px" action='/'>
+        <button class="home">Home </button>
+    </form>
+        <form action="/update/{{user.id}}" method="POST">
+        <br>
+        <label for="first_name">First Name:</label>
+        <br>
+        <input style="margin-right:18px" id="email" type="text" name="first_name" value="{{user.first_name}}">
+        <br>
+        <label for="last_name">Last Name:</label>
+        <br>
+        <input style="margin-right:18px" id="email" type="text" name="last_name" value="{{user.last_name}}">
+        <br>
+        <label for="email">Email:</label>
+        <br>
+        <input id="email" type="text" name="email" value="{{user.email}}">
+        <br>
+        <form id="submit" action='/update/{{user.id}}' method="POST">
+            <button class="back">Update</button>
+        </form>
+        <br>
+        <form action="/show/{{user.id}}">
+            <button class="back">Show User</button>
+        </form>
+    </form> 
+    </div>
+    
+
+    
+</body>
+</html>
